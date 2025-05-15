@@ -10,14 +10,14 @@
     <header>
         <div class="profile-container">
             <div class="profile-content">
-            <img class="profile-img" src="images/image.webp" alt="Profile Image of Alison Hopa" class="profile-img">
-            <h1 class="profile-name"> Alison Hopa</h1>
+                <img class="profile-img" src="images/image.webp" alt="Profile Image of Alison Hopa">
+                <h1 class="profile-name">Alison Hopa</h1>
+            </div>
         </div>
-        <nav class="nav-links">
+        <nav class="nav-links" role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="#">Home</a></li>
-                
-                <li><a href="#">Chamber</a></li> 
+                <li><a href="#">Chamber</a></li>
                 <li><a href="#">Final</a></li>
                 <li><a href="#">GitHub Profile</a></li>
                 <li><a href="#">LinkedIn</a></li>
@@ -26,27 +26,25 @@
     </header>
     
     <main>
-        <h1 class="page-title">Home</h1>
+        <h2 class="page-title">Home</h2>
         <div class="cards-container">
-        <section class="course-work card">
-            <h2>Course Work</h2>
-            <ul>
-                <li>CSE 110 - Introduction to Programming</li>
-                <li>WDD 130 - Web Fundamentals</li>
-                <li>CSE 111 - Programming with Functions</li>
-                <li>CSE 210 - Programming with Classes </li>
-                <li>WDD 131 - Dynamic Web Fundamentals</li>
-                <li>WDD 231 - Frontend Development I</li>
-            
+            <section class="course-work card">
+                <h2>Course Work</h2>
+                <ul>
+                    <li>CSE 110 - Introduction to Programming</li>
+                    <li>WDD 130 - Web Fundamentals</li>
+                    <li>CSE 111 - Programming with Functions</li>
+                    <li>CSE 210 - Programming with Classes</li>
+                    <li>WDD 131 - Dynamic Web Fundamentals</li>
+                    <li>WDD 231 - Frontend Development I</li>
+                </ul>
+            </section>
 
-            </ul>
-        </section>
-
-        <section class="location card">
-            <h2>Port Moresby, Papua New Guinea</h2>
-            <img src="baobab.jpg" alt="Baobab Trees in Madagascar">
-            <div class="caption">Baobab Trees</div>
-        </section>
+            <section class="location card">
+                <h2>Port Moresby, Papua New Guinea</h2>
+                <img src="images/bimage.webp" alt="Bird of Paradise in Papua New Guinea">
+                <div class="caption">PNG Bird of Paradise</div>
+            </section>
         </div>  
 
         <section class="certificate card">
@@ -68,8 +66,13 @@
     </main>
 
     <footer>
-        <p>© 2025 Alison Hopa | All Rights Reserved</p>
-        <p>Contact: <a href="mailto:alison@example.com">alison@example.com</a></p>
+        <div class="footer-content">
+            <span>&copy; 2025 <span class="flower-icon">🌸</span> Alison Hopa <span class="flower">🌸</span> Papua New Guinea</span>
+            <img src="images/image.png" alt="Papua New Guinea Flag" class="flag-img">
+        </div>
+        <div class="footer-update">
+            Last Update: 01/01/2025 12:00 00 
+        </div>
     </footer>
 
     <script src="scripts/scripts.js"></script>
