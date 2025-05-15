@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #1a1a7a;  
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+      
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 200px; /* Moves only the image and name */
+}
+
+
+.profile-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    color:white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    background-color:transparent;
+}
+
+
+
+.nav-links ul {
+    display: flex;
+    padding: 0;
+    margin:0;
+    list-style: none;
+    gap: 150px;
+}
+.nav-links li:first-child {
+    margin-left: 50px; /* Adds space to the left of the Home link */
+}    
+    
+    
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+main {
+    padding: 20px;
+}
+
+.course-work,
+.location,
+.certificate {
+    margin-bottom: 20px;
+}
+
+.filters button,
+.courses button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.page-title {
+    color: #1a4a6a;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px 0 0 10px;
+    font-family: Arial, sans-serif;
+}
+.cards-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    
+    
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex: 1 1 300px;
+    min-width: 250px;
+    max-width: 400px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.card h2 {
+    background: #1a4a6a;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 16px 0;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    
+}
+
+
+.card img {
+    width: 90%;
+    margin: 20px 0 10px 0;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.card .caption {
+    color: #444;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.certificate.card {
+    width: 100%;
+    max-width: none;
+    margin-top: 30px;
+    box-sizing: border-box;
+    
+}
+
+.filters button {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 24px;
+    margin: 10px 8px 20px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filters button:hover {
+    background-color: #444;
+}
+
+.courses {
+    display: flex;
+    flex-direction: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+.courses button {
+    min-width: 180px;
+    background-color: #7a3a1a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 18px 0;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.courses button:nth-child(4),
+.courses button:nth-child(6) {
+    background: #f4f4f4;
+    color: #444;
+    border: 1px solid #ccc;
+}
+
+.courses button:hover {
+    background: #a0522d;
+    color: #fff;
+}
+
+.course-work.card {
+    flex: 2 1 0;
+    min-width: 350px;
+    max-width: 700px;
+    
+}
+
+.location.card {
+    flex: 1 1 0;
+    min-width: 250px;
+    max-width: 500px;
+    
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
