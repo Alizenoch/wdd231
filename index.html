@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Header</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -26,6 +29,7 @@
     </header>
     
     <main>
+        
         <h2 class="page-title">Home</h2>
         <div class="cards-container">
             <section class="course-work card">
@@ -55,13 +59,14 @@
                 <button class="filter-btn">WDD</button>
             </div>
             <div class="courses">
-                <button>CSE 110</button>
-                <button>WDD 130</button>
-                <button>CSE 111</button>
-                <button>CSE 210</button>
-                <button>WDD 131</button>
-                <button>WDD 231</button>
+                <button data-type="CSE">CSE 110</button>
+                <button data-type="WDD">WDD 130</button>
+                <button data-type="CSE">CSE 111</button>
+                <button data-type="CSE">CSE 210</button>
+                <button data-type="WDD">WDD 131</button>
+                <button data-type="WDD">WDD 231</button>
             </div>
+            <div id="total-credits">Total Credits: 0</div>
         </section>
     </main>
 
