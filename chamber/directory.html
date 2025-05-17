@@ -21,21 +21,22 @@
 <body>
     
     <header class="header-container">
-    <img src="images/favicon.png" alt="Suinta
-     Chamber of Commerce" class="favicon-img">
-      <div class="header-text">
-        <h1>Suinta</h1>
-        <h2>Chamber of Commerce</h2>
+    <div class="header-left">
+        <img src="images/favicon.png" alt="Timbuktu Chamber of Commerce" class="logo-img">
+        <div class="header-text">
+            <h1>Timbuktu</h1>
+            <h2>Chamber of Commerce</h2>
+        </div>
     </div>
-    
     <nav class="nav-links">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
+    <div class="dark-toggle"></div>
 </header>
 
 <div class="hero">
@@ -47,14 +48,32 @@
     </div>
 </div>
 
-
-
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>We support businesses with networking opportunities and resources.</p>
-        </section>
-    </main>
+<main>
+    <section class="site-purpose">
+        <h2>Our Purpose</h2>
+        <p>
+            This website will serve as a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.
+        </p>
+    </section>
+    <section id="home">
+        <h2>Home</h2>
+        <div class="home-containers">
+            <div class="home-box events-box">
+                <div class="box-header">Events</div>
+                <!--Events contents here-->
+            </div>
+            <div class="home-box weather-box">
+                <div class="box-header">Current Weather</div>  
+                <!--Weather content here-->  
+            </div>
+            <div class="home-box forecast-box">
+                 <div class="box-header">Weather Forecast</div>
+               <!--Forecast content here-->  
+            </div>
+                
+        </div>
+    </section>
+</main>
 
     <footer>
         <p>&copy; 2025 Suinta Chamber of Commerce</p>
