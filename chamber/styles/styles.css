@@ -137,31 +137,41 @@ footer {
 /* Home Containers Grid */
 .home-containers {
     display: flex;
-    gap: 20px;
-    margin: 20px 0;
+    gap: 2%;
+    margin: 20px 1%;
+    width: 98%;
 }
 
 .home-box {
     background: #ddd;
-    flex: 1;
-    min-height: 200px;
     border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    min-height: 250px; /* Adjust as needed */
+    flex: 1 1 0;
 }
 
-.box-header {
-    background: #333;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding: 8px 12px;
+/* Make the Events box twice as wide */
+.events-box {
+    flex: 2 1 0;
 }
 
+.weather-box,
+.forecast-box {
+    flex: 1 1 0;
+}
+
+/* Responsive: stack vertically on small screen */
 @media (max-width: 900px) {
     .home-containers {
         flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .home-box {
+        min-height: 180px;
     }
 }
 
