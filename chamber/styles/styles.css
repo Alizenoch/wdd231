@@ -251,3 +251,66 @@ body {
     text-align: left;
     opacity: 0.95;
 }
+
+.directory-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.directory-card {
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+
+.directory-card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.directory-card-img {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.directory-card-img img,
+.directory-card-img svg {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.directory-card-info {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.directory-card-info p {
+  margin: 0.3rem 0;
+}
+
+.directory-card-info strong {
+  display: inline-block;
+  width: 60px;
+  color: #222;
+}
