@@ -209,6 +209,10 @@ body {
     margin-bottom: 8px;
 }
 
+.weather-details {
+    margin-top: 8px;
+}
+
 /* Responsive: stack vertically on small screen */
 @media (max-width: 900px) {
     .home-containers {
