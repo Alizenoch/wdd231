@@ -390,3 +390,19 @@ body {
     text-align: center;
   }
 }
+
+.weather-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.weather-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.weather-temp {
+  font-size: 2rem;
+  font-weight: bold;
+}
