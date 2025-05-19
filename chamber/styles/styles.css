@@ -271,6 +271,25 @@ body {
   min-width: 0;
 }
 
+.directory-card-header {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.directory-card-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.directory-card-header p {
+  margin: 0.2rem 0 0 0;
+  font-size: 1rem;
+  color: #666;
+}
+
 .directory-card-content {
   display: flex;
   flex-direction: row;
@@ -313,4 +332,61 @@ body {
   display: inline-block;
   width: 60px;
   color: #222;
+}
+
+.main-footer {
+  background: #e4e4e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2vw;
+  font-size: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+
+.footer-col.left {
+  text-align: left;
+}
+
+.footer-col.center {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-col.right {
+  text-align: right;
+}
+
+.footer-icon {
+  width: 48px;
+  height: 48px;
+  filter: grayscale(1);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.footer-icon:hover {
+  opacity: 1;
+  filter: none;
+}
+
+/* Responsive for small screens */
+@media (max-width: 700px) {
+  .main-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .footer-col.left,
+  .footer-col.right {
+    text-align: center;
+  }
 }
