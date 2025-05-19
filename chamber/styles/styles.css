@@ -1,7 +1,6 @@
-.body{
+body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    
+    text-align: left;
 }
 
 .header-container {
@@ -26,11 +25,10 @@
 
 .header-text {
     display: flex;
-    flex-direction: column; /* Stack text vertically */
+    flex-direction: column;
+    /* Stack text vertically */
     text-align: left;
-    margin-left: 0px
 }
-
 
 .header-text h1 {
     font-size: 2rem;
@@ -48,7 +46,8 @@
 }
 
 .nav-links {
-    margin-left: auto; /* Push links to the right */
+    margin-left: auto;
+    /* Push links to the right */
 }
 
 .nav-links ul {
@@ -81,44 +80,90 @@
 }
 
 /* Hero Image Section */
-.hero-container {
+.hero {
+    position: relative;
     width: 100%;
-    height: 100vh;
-    position: relative; /* Adjust height for better visibility */
-    overflow: hidden;
+    height: 600px;
+    /* Change this to your desired height (px, vh, etc.) */
+    /* background-image: url('hero-image.jpg'); */
+    /* Remove if using <img> */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+}
+
+.hero-content {
+    position: relative;
+    max-width: 80%;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
+    /* Fill the .hero container */
     object-fit: cover;
+    /* Cover for full area */
     display: block;
-    filter: brightness(80%); /* Enhances text readability */
-
+    background: #e5e5e5;
+    /* Fallback color */
 }
-
 
 .hero-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 2rem; /* Adjust text size */
-    font-weight: bold;
-    width: 80%;
-    max-width: 600px;
+    bottom: 24px;
+    right: 24px;
+    text-align: right;
+    color: #222;
+    font-size: 1.1rem;
+    width: auto;
+    z-index: 2;
 }
 
 
+
+.cta-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 24px;
+    background: #888;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 2px 2px 6px #bbb;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #555;
+    color: #fff;
+}
 
 /* Home Containers Grid */
 .home-containers {
     display: flex;
-    gap: 2%;
-    margin: 20px 1%;
-    width: 98%;
+    gap: 1.5%; /* Reduced gap for a tighter layout */
+    margin: 20px 0;
+    width: 100%;
 }
 
 .home-box {
@@ -128,28 +173,41 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 250px; /* Adjust as needed */
+    min-height: 250px;
     flex: 1 1 0;
 }
 
-/* Make the Events box twice as wide */
+/* Events box: 50% width */
 .events-box {
     flex: 2 1 0;
+    min-width: 0;
 }
 
+/* Weather and Forecast: 25% width each */
 .weather-box,
 .forecast-box {
     flex: 1 1 0;
+    min-width: 0;
 }
 
-footer {
-    background-color: #004080;
-    color: white;
-    padding: 10px;
+/* Weather icon and temperature styling */
+.current-weather {
+    font-size: 1rem;
+    color: #222;
+}
+.current-weather img,
+.current-weather svg {
+    vertical-align: middle;
 }
 
-
-
+/* Forecast styling */
+.forecast {
+    margin-top: 16px;
+    font-size: 1.1rem;
+}
+.forecast div {
+    margin-bottom: 8px;
+}
 
 /* Responsive: stack vertically on small screen */
 @media (max-width: 900px) {
@@ -158,19 +216,29 @@ footer {
         gap: 20px;
         width: 100%;
     }
+
     .home-box {
         min-height: 180px;
     }
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-  .hero-image {
-    height: 50vh; /* Smaller height for mobile */
-  }
-  .hero-text {
-    font-size: 1.5rem;
-  }
+@media (max-width: 700px) {
+    .hero {
+        height: 220px;
+        /* Adjust hero height for small screens */
+    }
+
+    .hero-image {
+        height: 100%;
+        max-height: 220px;
+    }
+
+    .hero-text {
+        bottom: 12px;
+        right: 12px;
+        font-size: 1rem;
+    }
 }
 
 .box-header {

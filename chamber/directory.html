@@ -16,7 +16,7 @@
     
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="script.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
     
@@ -40,12 +40,10 @@
 </header>
 
 <div class="hero">
-    <img src="images/hero.jpg" alt="Welcome to Suinta" class="hero-image" loading="lazy">
+    <img src="images/image.png" alt="scalable, responsive hero image" class="hero-image" loading="lazy">
     <div class="hero-text">
-        
-        
-        <a href="join.html" class="cta-button">Join Us Today</a>
-    </div>
+        <a href="tickets.html" class="cta-button">Keynote Tickets</a>
+    </div>  
 </div>
 
 <main>
@@ -61,18 +59,52 @@
             <div class="home-box events-box">
                 <div class="box-header">Events</div>
                 <!--Events contents here-->
+                <!-- Example event for the Events box -->
+                <div class="event">
+                  <h3>Business Networking Breakfast</h3>
+                  <p><strong>Date:</strong> June 12, 2025</p>
+                  <p><strong>Time:</strong> 8:00 AM – 9:30 AM</p>
+                  <p><strong>Location:</strong> Timbuktu Community Center</p>
+                  <p>
+                    Join local business owners, executives, and new residents for a morning of networking and collaboration. Enjoy a complimentary breakfast, share ideas, and build valuable connections to help your business grow.
+                  </p>
+                  <a href="#" class="cta-button">Register Now</a>
+                </div>
             </div>
             <div class="home-box weather-box">
                 <div class="box-header">Current Weather</div>  
                 <!--Weather content here-->  
+                <!-- Example content for the Current Weather box -->
+                <div class="current-weather">
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <img src="images/partly-cloudy-icon.png" alt="Partly Cloudy" style="width:48px;height:48px;">
+                    <span style="font-size: 2rem; font-weight: bold;">75&deg;F</span>
+                  </div>
+                  <div style="margin-top: 8px;">
+                    <div>Partly Cloudy</div>
+                    <div>High: 85&deg;</div>
+                    <div>Low: 52&deg;</div>
+                    <div>Humidity: 34%</div>
+                    <div>Sunrise: 7:30am</div>
+                    <div>Sunset: 9:59pm</div>
+                  </div>
+                </div>
             </div>
             <div class="home-box forecast-box">
                  <div class="box-header">Weather Forecast</div>
                <!--Forecast content here-->  
+               <!-- Example content for the Weather Forecast box -->
+               <div class="forecast">
+                 <div><strong>Today:</strong> 90&deg;F</div>
+                 <div><strong>Wednesday:</strong> 89&deg;F</div>
+                 <div><strong>Thursday:</strong> 68&deg;F</div>
+               </div>
             </div>
                 
         </div>
     </section>
+    <!-- Place this where you want the directory cards to show -->
+    <div class="directory-cards" id="directory-cards"></div>
 </main>
 
     <footer>

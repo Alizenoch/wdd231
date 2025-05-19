@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Sunrise Bakery",
+    "address": "123 Main St, Timbuktu",
+    "phone": "555-1234",
+    "website": "https://sunrisebakery.com",
+    "image": "sunrise-bakery.jpg",
+    "membership": "Gold",
+    "email": "info@sunrisebakery.com",
+    "tagline": "Fresh bread every morning"
+  },
+  {
+    "name": "Green Leaf Cafe",
+    "address": "456 Oak Ave, Timbuktu",
+    "phone": "555-5678",
+    "website": "https://greenleafcafe.com",
+    "image": "green-leaf-cafe.jpg",
+    "membership": "Silver",
+    "email": "hello@greenleafcafe.com",
+    "tagline": "Healthy and delicious"
+  },
+  {
+    "name": "Tech Solutions",
+    "address": "789 Technology Dr, Timbuktu",
+    "phone": "555-9012",
+    "website": "https://techsolutions.com",
+    "image": "tech-solutions.jpg",
+    "membership": "Bronze",
+    "email": "support@techsolutions.com",
+    "tagline": "Innovative IT services"
+  },
+  {
+    "name": "Fitness First Gym",
+    "address": "321 Workout Blvd, Timbuktu",
+    "phone": "555-3456",
+    "website": "https://fitnessfirst.com",
+    "image": "fitness-first-gym.jpg",
+    "membership": "Gold",
+    "email": "contact@fitnessfirst.com",
+    "tagline": "Your health, our priority"
+  },
+  {
+    "name": "Book Nook",
+    "address": "654 Library Ln, Timbuktu",
+    "phone": "555-7890",
+    "website": "https://booknook.com",
+    "image": "book-nook.jpg",
+    "membership": "Silver",
+    "email": "info@booknook.com",
+    "tagline": "A world of books"
+  },
+  {
+    "name": "Timbuktu Florist",
+    "address": "987 Flower Rd, Timbuktu",
+    "phone": "555-2345",
+    "website": "https://timbuktuflorist.com",
+    "image": "timbuktu-florist.jpg",
+    "membership": "Bronze",
+    "email": "orders@timbuktuflorist.com",
+    "tagline": "Blooms for every occasion"
+  },
+  {
+    "name": "City Hardware",
+    "address": "159 Tool St, Timbuktu",
+    "phone": "555-6789",
+    "website": "https://cityhardware.com",
+    "image": "city-hardware.jpg",
+    "membership": "Gold",
+    "email": "sales@cityhardware.com",
+    "tagline": "Tools and more"
+  }
+]
