@@ -3,76 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Directory page for the Suinta Chamber of Commerce - Supporting local businesses and fostering community growth.">
-    <meta name="author" content="Alison Hopa">       
-    <title>Suinta Chamber of Commerce Directory </title>
-    <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Suinta Chamber of Commerce Directory">
-    <meta property="og:description" content="Directory page for the Suinta Chamber of Commerce - Supporting local businesses and fostering community growth.">
-    <meta property="og:image" content="https://alizenoch.github.io/wdd231/chamber/images/hero.jpg">
-    <meta property="og:url" content="https://alizenoch.github.io/wdd231/chamber/directory.html">
-    <meta property="og:type" content="website"> <!-- Added this line -->
-    
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Discover business listings, networking opportunities, and local events in Port Moresby.">
+    <meta name="author" content="Suinta Chamber of Commerce">
+    <meta name="keywords" content="business directory, Port Moresby, networking, events, commerce">
+    <title>Suinta Chamber of Commerce Directory</title>
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/script.js" defer></script>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script defer src="scripts/script.js"></script>
 </head>
 <body>
-    
-    <header class="header-container">
-    <div class="header-left">
-        <img src="images/favicon.png" alt="Suinta Chamber of Commerce" class="logo-img">
-        <div class="header-text">
-            <h1>Suinta</h1>
-            <h2>Chamber of Commerce</h2>
-        </div>
+    <header>
+         <div class="logo">
+        <img src="images/favicon.png" alt="Suinta Chamber of Commerce">
     </div>
-    <nav class="nav-links">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
-        </ul>
-    </nav>
-    <div class="dark-toggle"></div>
-</header>
+        <h1>Suinta Chamber of Commerce Directory</h1>
+        <nav>
+            <button id="menu-toggle">☰ Menu</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="business-directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="keynote.html">Keynote</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+      <section class="hero">
+      <img class="hero-image" src="images/hero-large.jpg" alt="Suinta Chamber of Commerce">
+      </section>
+       <section id="home">
+           
+           <h1 class="home-title">Home</h1>
 
-<div class="hero">
-    <img src="images/image.png" alt="scalable, responsive hero image" class="hero-image" loading="lazy">
-    <div class="hero-text">
-        <a href="tickets.html" class="cta-button">Keynote Tickets</a>
-    </div>  
-</div>
-
-<main>
-    <h1>Suinta Chamber of Commerce Directory </h1>
-    <section class="site-purpose">
-        <h2>Our Purpose</h2>
-        <p>
-            This website will serve as a resource hub for businesses in the city of Port Moresby. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.
-        </p>
-    </section>
-    <section id="home">
-        <h2>Home</h2>
-        <div class="home-containers">
+           <div class="home-containers">
             <div class="home-box events-box">
-                <div class="box-header">Events</div>
-                <!--Events contents here-->
-                <!-- Example event for the Events box -->
-                <div class="event">
-                  <h3>Business Networking Breakfast</h3>
+                 <div class="box-header">Events</div>
+                
+ 
+
+                  <!--Events contents here-->
+                  <!-- Example event for the Events box -->
+                  <div class="event">
+                     <h3>Business Networking Breakfast</h3>
                   <p><strong>Date:</strong> June 12, 2025</p>
                   <p><strong>Time:</strong> 8:00 AM – 9:30 AM</p>
-                  <p><strong>Location:</strong> Timbuktu Community Center</p>
-                  <p>
+                  <p><strong>Location:</strong> Suinta Community Center</p>
+                   <p>
                     Join local business owners, executives, and new residents for a morning of networking and collaboration. Enjoy a complimentary breakfast, share ideas, and build valuable connections to help your business grow.
                   </p>
                   <a href="#" class="cta-button">Register Now</a>
-                </div>
+                  </div> 
             </div>
-            <div class="home-box weather-box">
+             <div class="home-box weather-box">
                 <div class="box-header">Current Weather</div>  
                 <!--Weather content here-->  
                 <!-- Example content for the Current Weather box -->
@@ -103,34 +93,32 @@
             </div>
                 
         </div>
-    </section>
-    <!-- Place this where you want the directory cards to show -->
-    <div class="directory-cards" id="directory-cards"></div>
-</main>
+           
+       </section>
 
-    <footer class="main-footer">
-  <div class="footer-col left">
-    <strong>Timbuktu Chamber of Commerce</strong><br>
-    10 Rue De La Paix<br>
-    Timbuktu, Mali 999<br>
-    info@timbuktucc.org<br>
-    (223) 555-2300
-  </div>
-  <div class="footer-col center">
-    <a href="#" aria-label="YouTube"><img src="images/youtube-icon.svg" alt="YouTube" class="footer-icon"></a>
-    <a href="#" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Twitter" class="footer-icon"></a>
-    <a href="#" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn" class="footer-icon"></a>
-  </div>
-  <div class="footer-col right">
-    WDD231 Class Project<br>
-    Marie Martínez<br>
-    &copy; 20xx Timbuktu Chamber of Commerce<br>
-    Last Modification: <span id="lastModified"></span>
-  </div>
-</footer>
-<script>
-  // Set last modified date
-  document.getElementById('lastModified').textContent = document.lastModified;
-</script>
+        <section>
+            <h2>Business Directory</h2>
+            <button id="gridView">Grid View</button>
+            <button id="listView">List View</button>
+            <div id="directoryContainer" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="copyrightYear"></span> Suinta Chamber of Commerce</p>
+        <address>
+            <p>10 Rue De La Paix, Timbuktu, Mali 999</p>
+            <p>Email: <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a></p>
+            <p>Phone: (223) 555-2300</p>
+        </address>
+        <ul class="social-media">
+            <li><a href="https://facebook.com/suintachamber">Facebook</a></li>
+            <li><a href="https://twitter.com/suintachamber">Twitter</a></li>
+            <li><a href="https://linkedin.com/company/suintachamber">LinkedIn</a></li>
+            <li><a href="https://youtube.com/suintachamber">YouTube</a></li>
+        </ul>
+        <p>WDD 231 Class Project by Alison Hopa</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>

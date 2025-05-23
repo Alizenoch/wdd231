@@ -1,40 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-    fetch('data/members.json')
-        .then(response => response.json())
-        .then(members => {
-            const container = document.getElementById('directory-cards');
-            container.innerHTML = members.map(member => `
-  <div class="directory-card">
-    <div class="directory-card-header">
-      <h3>${member.name}</h3>
-      <p>${member.tagline || ''}</p>
-    </div>
-    <div class="directory-card-content">
-      <div class="directory-card-img">
-        ${member.image
-          ? `<img src="images/${member.image}" alt="${member.name}">`
-          : `<svg width="100" height="100"><rect width="100" height="100" fill="#bbb"/><line x1="0" y1="0" x2="100" y2="100" stroke="#888" stroke-width="2"/><line x1="100" y1="0" x2="0" y2="100" stroke="#888" stroke-width="2"/></svg>`
-        }
-      </div>
-      <div class="directory-card-info">
-        <p><strong>EMAIL:</strong> ${member.email || 'N/A'}</p>
-        <p><strong>PHONE:</strong> ${member.phone}</p>
-        <p><strong>URL:</strong> ${member.website.replace(/^https?:\/\//, '')}</p>
-      </div>
-    </div>
-  </div>
-`).join('');
-        });
+document.addEventListener("DOMContentLoaded", function () {
+    // Display Current Copyright Year
+    const currentYear = new Date().getFullYear();
+    document.getElementById("copyrightYear").textContent = currentYear;
+
+    // Auto-update last modification date
+    document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Fetch and display members
+    fetchMembers();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    let logo = document.getElementById("logo");
+async function fetchMembers() {
+    try {
+        const response = await fetch("data/members.json");
+        const members = await response.json();
+        displayMembers(members);
+    } catch (error) {
+        console.error("Error fetching member data:", error);
+    }
+}
 
-    logo.addEventListener("mouseover", function () {
-        logo.style.opacity = "0.7"; // Slight fade effect
-    });
+function displayMembers(members) {
+    const container = document.getElementById("directoryContainer");
+    container.innerHTML = ""; 
 
-    logo.addEventListener("mouseout", function () {
-        logo.style.opacity = "1"; // Restore original look
+    members.forEach(member => {
+        const memberCard = document.createElement("article");
+        memberCard.classList.add("business-card");
+        memberCard.innerHTML = `
+            <img src="images/${member.image}" alt="${member.name} Logo">
+            <h3>${member.name}</h3>
+            <p>${member.description}</p>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+        `;
+        container.appendChild(memberCard);
     });
+}
+
+// Toggle between Grid and List View
+document.getElementById("gridView").addEventListener("click", function() {
+    document.getElementById("directoryContainer").classList.add("grid");
+    document.getElementById("directoryContainer").classList.remove("list");
+});
+
+document.getElementById("listView").addEventListener("click", function() {
+    document.getElementById("directoryContainer").classList.add("list");
+    document.getElementById("directoryContainer").classList.remove("grid");
 });
