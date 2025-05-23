@@ -23,10 +23,32 @@ header {
     padding: 20px;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center; /* Aligns logo and name vertically */
+    gap: 0px; /* Adjust spacing between logo and name */
+}
 .logo img {
-    height: 60px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
 }
 
+.logo-name {
+    font-size: 2rem;
+    color: #fff;
+     margin-left: 0px; /* Adjust for better alignment */
+    text-align: left; /* Centers the text */
+}
+
+.logo-top {
+    display: block; /* Ensures Suinta stays on top */
+    font-size: 1.5rem; /* Adjust size */
+    font-weight: bold;
+}
+
+.logo-bottom {
+    display: block; /* Ensures Chamber of Commerce stays below */
+    font-size: 1.2rem;
+}
 /* Navigation */
 nav {
     background-color: #2A4D69;
