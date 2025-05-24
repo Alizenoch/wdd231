@@ -13,10 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
 async function fetchMembers() {
     try {
         const response = await fetch("data/members.json");
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
         const members = await response.json();
         displayMembers(members);
     } catch (error) {
         console.error("Error fetching member data:", error);
+        document.getElementById("directoryContainer").innerHTML = "<p>Error loading member data. Please try again later.</p>";
     }
 }
 
@@ -27,25 +30,40 @@ function displayMembers(members) {
     members.forEach(member => {
         const memberCard = document.createElement("article");
         memberCard.classList.add("business-card");
-        memberCard.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} Logo">
+
+        // Create image element with fallback
+        const imgElement = document.createElement("img");
+        imgElement.src = `images/${member.image}`;
+        imgElement.alt = `${member.name} Logo`;
+        imgElement.onerror = () => imgElement.src = "images/default-logo.png"; // Fallback image
+
+        memberCard.appendChild(imgElement);
+
+        memberCard.innerHTML += `
             <h3>${member.name}</h3>
             <p>${member.description}</p>
             <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
         `;
+        
         container.appendChild(memberCard);
     });
 }
 
-// Toggle between Grid and List View
+// Toggle between Grid and List View with accessibility improvements
 document.getElementById("gridView").addEventListener("click", function() {
-    document.getElementById("directoryContainer").classList.add("grid");
-    document.getElementById("directoryContainer").classList.remove("list");
+    const container = document.getElementById("directoryContainer");
+    container.classList.add("grid");
+    container.classList.remove("list");
+    this.setAttribute("aria-pressed", "true");
+    document.getElementById("listView").setAttribute("aria-pressed", "false");
 });
 
 document.getElementById("listView").addEventListener("click", function() {
-    document.getElementById("directoryContainer").classList.add("list");
-    document.getElementById("directoryContainer").classList.remove("grid");
+    const container = document.getElementById("directoryContainer");
+    container.classList.add("list");
+    container.classList.remove("grid");
+    this.setAttribute("aria-pressed", "true");
+    document.getElementById("gridView").setAttribute("aria-pressed", "false");
 });

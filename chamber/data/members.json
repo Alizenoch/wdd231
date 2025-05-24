@@ -1,6 +1,7 @@
 [
   {
     "name": "Sunrise Bakery",
+    "description": "A local bakery offering fresh bread and pastries every morning.",
     "address": "123 Main St, Timbuktu",
     "phone": "555-1234",
     "website": "https://sunrisebakery.com",
@@ -11,6 +12,7 @@
   },
   {
     "name": "Green Leaf Cafe",
+    "description": "A cozy cafe serving organic coffee and healthy meals.",
     "address": "456 Oak Ave, Timbuktu",
     "phone": "555-5678",
     "website": "https://greenleafcafe.com",
@@ -21,6 +23,7 @@
   },
   {
     "name": "Tech Solutions",
+    "description": "Providing innovative IT solutions for businesses of all sizes.",
     "address": "789 Technology Dr, Timbuktu",
     "phone": "555-9012",
     "website": "https://techsolutions.com",
@@ -31,6 +34,7 @@
   },
   {
     "name": "Fitness First Gym",
+    "description": "A state-of-the-art gym with personal trainers and group classes.",
     "address": "321 Workout Blvd, Timbuktu",
     "phone": "555-3456",
     "website": "https://fitnessfirst.com",
@@ -41,6 +45,7 @@
   },
   {
     "name": "Book Nook",
+    "description": "A charming bookstore with a wide selection of books and cozy reading nooks.",
     "address": "654 Library Ln, Timbuktu",
     "phone": "555-7890",
     "website": "https://booknook.com",
@@ -51,6 +56,7 @@
   },
   {
     "name": "Timbuktu Florist",
+    "description": "Your local florist providing beautiful arrangements for all occasions.",
     "address": "987 Flower Rd, Timbuktu",
     "phone": "555-2345",
     "website": "https://timbuktuflorist.com",
@@ -61,6 +67,7 @@
   },
   {
     "name": "City Hardware",
+    "description": "Your one-stop shop for all hardware needs, from tools to home improvement.",
     "address": "159 Tool St, Timbuktu",
     "phone": "555-6789",
     "website": "https://cityhardware.com",
