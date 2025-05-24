@@ -85,6 +85,19 @@ nav ul li a {
     display: block;
 }
 
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity for better readability */
+}
+
+.hero-text {
+  color: #fff; /* White text stands out against darker backgrounds */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds subtle shading */
+}
 
 
 @media (max-width: 768px) {
