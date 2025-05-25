@@ -1,0 +1,33 @@
+/* Remove margins, paddings, and border effects */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Standardize font behavior */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+}
+
+/* Remove default list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default button styling */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Ensure images scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
