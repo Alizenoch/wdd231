@@ -10,6 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchMembers();
 });
 
+    // Toggle Mobile Navigation Menu
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        const navMenu = document.querySelector("nav ul");
+        navMenu.classList.toggle("show-menu");
+    });
+
+
 async function fetchMembers() {
     try {
         const response = await fetch("data/members.json");

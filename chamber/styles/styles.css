@@ -69,7 +69,7 @@ nav ul li a {
 }
 /* Hero Section */
 .hero {
-    width: 100vw;
+    width: 100%;               /* Full width of the viewport */
     height: auto;               /* Let the image's height scale naturally */
     overflow: hidden;
     display: flex;
@@ -77,6 +77,14 @@ nav ul li a {
     align-items: center;
     
     background-color: #e5e5e5;
+}
+
+
+/* Fix 2: box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .hero-image {
@@ -91,7 +99,7 @@ nav ul li a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Adjust opacity for better readability */
+  background: rgba(0, 0, 0, 0.65); /* Adjust opacity for better readability */
 }
 
 .hero-text {
@@ -119,6 +127,7 @@ h1 {
     margin: 20px 0;
     width: 100%;    
     justify-content: center;  
+    flex-wrap: wrap;
 }
 
 .home-title {
@@ -126,14 +135,16 @@ h1 {
     font-size: 25px;
 }
 .home-box {
-    background: #ddd;
+    background: #ccc;
     border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 250px;
-    flex: 1 1 0;
+    flex: 1 1 100%; /* Allows the box to grow and shrink, taking full width on smaller screens */
+    min-width: 250px; /* Ensures a minimum width for each box */
+
 }
 
 .box-header {
@@ -152,8 +163,13 @@ h1 {
     min-width: 0;
     margin-right: 5px;
     margin-left: 10px;
-    
-    
+      
+}
+
+@media (max-width: 768px) {
+  .events-box {
+    margin: 0;
+  }
 }
 
 
@@ -167,7 +183,7 @@ h1 {
 /* Weather icon and temperature styling */
 .current-weather {
     font-size: 1rem;
-    color: #222;
+    color: #111;
 }
 .current-weather img,
 .current-weather svg {
@@ -224,7 +240,7 @@ button {
     padding: 10px 15px;
     margin: 10px;
     border: none;
-    background-color: #F4A261;
+    background-color: #E76F51;
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
@@ -247,6 +263,9 @@ button:hover {
 }
 
 .business-card {
+    width: 90%;
+    max-width: 350px;
+    margin:auto;
     padding: 15px;
     border: 1px solid #ddd;
     background: #ffffff;
@@ -296,6 +315,7 @@ footer ul {
 
 @media (max-width: 320px) {
     body {
+        width: 100%;
         font-size: 14px;
     }
 
