@@ -21,9 +21,14 @@ header {
     display: flex;
     align-items: center; /* Aligns logo and name vertically */
     gap: 0px; /* Adjust spacing between logo and name */
+    min-height: 80px;
 }
 .logo img {
+    width: 80px; /* Adjust size as needed */
     height: 80px; /* Adjust size as needed */
+    display: block; /* Ensures the image is treated as a block element */
+    object-fit: contain; /* Ensures the logo maintains its aspect ratio */
+    
 }
 
 .logo-name {
@@ -69,7 +74,8 @@ nav ul li a {
 }
 /* Hero Section */
 .hero {
-    width: 100%;               /* Full width of the viewport */
+    width: 100%;  
+    min-height: 500px;             /* Full width of the viewport */
     height: auto;               /* Let the image's height scale naturally */
     overflow: hidden;
     display: flex;
@@ -88,9 +94,10 @@ nav ul li a {
 }
 
 .hero-image {
-    width: 100%;                /* Make it span the full width */
-    height: auto;               /* Maintain aspect ratio */
-    display: block;
+    width: 100%;  
+    height: auto;
+    min-height: 500px;             
+    object-fit: cover;  /* Cover the area without stretching */
 }
 
 .hero-overlay {
