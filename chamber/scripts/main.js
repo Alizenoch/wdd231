@@ -1,34 +1,47 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Smooth Scrolling
-    document.querySelectorAll("nav a").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        });
-    });
-
-    // Lazy Loading Optimization
-    function lazyLoadImages() {
-        document.querySelectorAll("img[data-src]").forEach(img => {
-            img.src = img.dataset.src;
-            img.removeAttribute("data-src");
-        });
-    }
-
-    // Real-Time Weather Update
-    function loadWeather() {
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=Port%20Moresby&appid=YOUR_API_KEY&units=metric")
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("weather-status").textContent = `${data.weather[0].description}, ${data.main.temp}°C`;
-            })
-            .catch(error => console.error("Weather data fetch error:", error));
-    }
-
-    loadWeather();
-    lazyLoadImages();
+// Menu Toggle
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('open');
 });
+
+// Dynamic Year Update
+document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+// Last Modified Date
+document.getElementById('lastModified').textContent = document.lastModified;
+
+// Weather Data Simulation
+const weatherData = {
+    temperature: '75°F',
+    condition: 'Partly Cloudy',
+    high: '85°F',
+    low: '52°F',
+    humidity: '34%',
+    sunrise: '7:30 AM',
+    sunset: '9:59 PM'
+};
+
+function updateWeather() {
+    const weatherBox = document.querySelector('.weather-box');
+    weatherBox.innerHTML = `
+        <div class="box-header">⛅ Current Weather</div>
+        <div class="current-weather">
+            <div class="weather-row">
+                <img src="images/partly-cloudy-icon.webp" alt="${weatherData.condition}" class="weather-icon">
+                <span class="weather-temp">${weatherData.temperature}</span>
+            </div>
+            <div class="weather-details">
+                <div>Condition: ${weatherData.condition}</div>
+                <div>High: ${weatherData.high}</div>
+                <div>Low: ${weatherData.low}</div>
+                <div>Humidity: ${weatherData.humidity}</div>
+                <div>Sunrise: ${weatherData.sunrise}</div>
+                <div>Sunset: ${weatherData.sunset}</div>
+            </div>
+        </div>`;
+}
+
+// Run Weather Update
+updateWeather();
 
 

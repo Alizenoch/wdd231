@@ -2,57 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover business listings, networking opportunities, and local events in Port Moresby.">
+    <meta name="author" content="Suinta Chamber of Commerce">
+    <meta name="keywords" content="business directory, Port Moresby, networking, events, commerce">
+    <title>Suinta Chamber of Commerce</title>
+    <meta property="og:title" content="Suinta Chamber of Commerce" />
+    <meta property="og:description" content="Explore business listings, networking events, and commerce insights in Port Moresby." />
+    <meta property="og:image" content="https://alizenoch.github.io/wdd231/chamber/images/hero-large.jpg" />
+    <meta property="og:url" content="https://alizenoch.github.io/wdd231/chamber/index.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script defer src="scripts/script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Community Hub</h1>
-        <p>Your one-stop platform for local updates</p>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="#" aria-label="Home">Home</a></li>
-                <li><a href="#community" aria-label="Community Updates">Community</a></li>
-                <li><a href="#weather" aria-label="Live Weather">Weather</a></li>
-                <li><a href="#business-spotlights" aria-label="Featured Businesses">Businesses</a></li>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="images/favicon.webp" alt="Suinta Chamber of Commerce">
+            </div>
+            <h1 class="logo-name">
+                <span class="logo-top">Suinta</span>    
+                <span class="logo-bottom">Chamber of Commerce</span>
+            </h1>
+        </div>
+        <nav>
+            <button id="menu-toggle">☰ Menu</button>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="business-directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+             
+                
+                
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <h2>Stay Informed, Stay Connected</h2>
-            <p>Discover local news, events, and exclusive insights from your community.</p>
-            <a href="#" class="cta-button">Join Us</a>
+        <section class="hero">
+            <img class="hero-image" src="images/hero-large.webp" loading="lazy" alt="Suinta Chamber of Commerce">
+            <div class="hero-text">
+                <h2>Building Connections, Growing Businesses</h2>
+                <p>Join the thriving business community in Port Moresby and explore endless networking opportunities.</p>
+                <a href="join.html" class="cta-button">Become a Member</a>
+            </div>
         </section>
 
-        <section id="weather">
-            <h2>Live Weather Updates</h2>
-            <p>Current Conditions: <span id="weather-status">Loading...</span></p>
-        </section>
+        <section id="home">
+            <h2> Home – Your Gateway to Business & Community</h2>
+            <p>Welcome to the Suinta Chamber of Commerce! Here, you'll find **attention-grabbing news**, **community updates**, **real-time weather**, and **featured business spotlights** all in one place.</p>
 
-        <section id="community">
-            <h2>Community Highlights</h2>
-            <p>Upcoming Events, Announcements, and Local Stories</p>
-        </section>
-
-        <section id="business-spotlights">
-            <h2>Featured Businesses</h2>
-            <ul>
-                <li><img src="bakery.jpg" alt="Local Bakery" loading="lazy"> Local Bakery</li>
-                <li><img src="tech-repair.jpg" alt="Tech Repair" loading="lazy"> Tech Repair</li>
-                <li><img src="art-gallery.jpg" alt="Art Gallery" loading="lazy"> Art Gallery</li>
-            </ul>
+            <div class="home-containers">
+                <div class="home-box spotlight-box">
+                    <div class="box-header">🌟 Business Spotlight</div>
+                    <p>Celebrating local businesses that are shaping the future of commerce in Port Moresby.</p>
+                    <a href="discover.html" class="cta-button">Explore More</a>
+                </div>
+                <div class="home-box events-box">
+                    <div class="box-header">📅 Upcoming Events</div>
+                    <p>Stay ahead with **networking opportunities**, **business meetups**, and **community engagement sessions**.</p>
+                    <a href="events.html" class="cta-button">View Events</a>
+                </div>
+                <div class="home-box weather-box">
+                    <div class="box-header">⛅ Current Weather</div>
+                    <p>Live weather updates to plan your day efficiently.</p>
+                    <div class="current-weather">
+                        <div class="weather-row">
+                            <img src="images/partly-cloudy-icon.webp" alt="Partly Cloudy" class="weather-icon">
+                            <span class="weather-temp">75&deg;F</span>
+                        </div>
+                        <div class="weather-details">
+                            <div>Humidity: 34%</div>
+                            <div>Sunrise: 7:30 AM</div>
+                            <div>Sunset: 9:59 PM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-box community-box">
+                    <div class="box-header">🏡 Community Highlights</div>
+                    <p>Discover inspiring **success stories**, **business achievements**, and **local initiatives**.</p>
+                    <a href="discover.html" class="cta-button">Learn More</a>
+                </div>
+                <div class="home-box call-to-action-box">
+                    <div class="box-header">🚀 Join Us</div>
+                    <p>Become a **member** and gain exclusive access to resources, networking opportunities, and commerce insights.</p>
+                    <a href="join.html" class="cta-button">Sign Up Today</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Community Hub</p>
+        <p>© <span id="copyrightYear"></span> Suinta Chamber of Commerce</p>
+        <ul class="social-media">
+            <li><a href="https://facebook.com/suintachamber">Facebook</a></li>
+            <li><a href="https://twitter.com/suintachamber">Twitter</a></li>
+            <li><a href="https://linkedin.com/company/suintachamber">LinkedIn</a></li>
+            <li><a href="https://youtube.com/suintachamber">YouTube</a></li>
+        </ul>
+        <p>WDD 231 Class Project by Alison Hopa</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
+
 
 
 
