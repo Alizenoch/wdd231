@@ -1,8 +1,16 @@
 // Menu Toggle
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    const menu = document.getElementById('nav-menu');
-    const isOpen = menu.classList.toggle('open');
-    this.setAttribute('aria-expanded', isOpen);
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("nav-menu");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", function () {
+            const isOpen = menu.classList.toggle("open");
+            this.setAttribute("aria-expanded", isOpen);
+        });
+    } else {
+        console.error("Menu toggle or nav menu not found in the document.");
+    }
 });
 
 
@@ -46,39 +54,82 @@ fetch(url)
       `;
     }
   })
-  .catch(error => console.error('Error fetching weather data:', error));
+  .catch(error => {
+    console.error("Error fetching weather data:", error);
+    document.querySelector(".weather-temp").innerText = "Weather data unavailable";
+    document.querySelector(".weather-details").innerHTML = "<p>Could not retrieve weather information.</p>";
+});
+
 
 // Fetch Chamber Members JSON
-fetch('data/members.json')
-  .then(response => response.json())
-  .then(data => {
-    // Filter only Gold & Silver members
-    const eligibleMembers = data.members.filter(member => 
-      member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'
-    );
+// Fetch and display members
+    fetchMembers();
 
-    // Randomly select 2 or 3 members
-    const shuffled = eligibleMembers.sort(() => 0.5 - Math.random());
-    const selectedMembers = shuffled.slice(0, Math.min(3, shuffled.length));
 
-    // Display Spotlight Ads
-    const spotlightContainer = document.querySelector('.business-spotlight');
-    spotlightContainer.innerHTML = ''; // Clear previous content
-
-    selectedMembers.forEach(member => {
-      const spotlightCard = document.createElement('div');
-      spotlightCard.className = 'spotlight-box';
-      spotlightCard.innerHTML = `
-        <img src="${member.logo}" alt="${member.name}">
-        <h3>${member.name}</h3>
-        <p>${member.address}</p>
-        <p>Phone: ${member.phone}</p>
-        <p>Membership Level: ${member.membershipLevel}</p>
-        <a href="${member.website}" target="_blank">Visit Website</a>
-      `;
-      spotlightContainer.appendChild(spotlightCard);
+    // Toggle Mobile Navigation Menu
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        const navMenu = document.querySelector("nav ul");
+        navMenu.classList.toggle("show-menu");
     });
-  })
-  .catch(error => console.error('Error loading chamber members:', error));
+
+
+async function fetchMembers() {
+    try {
+        const response = await fetch("data/members.json");
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+        const members = await response.json();
+        displayMembers(members);
+    } catch (error) {
+        console.error("Error fetching member data:", error);
+        document.getElementById("directoryContainer").innerHTML = "<p>Error loading member data. Please try again later.</p>";
+    }
+}
+
+function displayMembers(members) {
+    const container = document.getElementById("directoryContainer");
+    container.innerHTML = ""; 
+
+    members.forEach(member => {
+        const memberCard = document.createElement("article");
+        memberCard.classList.add("business-card");
+
+        // Create image element with fallback
+        const imgElement = document.createElement("img");
+        imgElement.src = `images/${member.image}`;
+        imgElement.alt = `${member.name} Logo`;
+        imgElement.onerror = () => imgElement.src = "images/default-logo.png"; // Fallback image
+
+        memberCard.appendChild(imgElement);
+
+        memberCard.innerHTML += `
+            <h3>${member.name}</h3>
+            <p>${member.description}</p>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+        `;
+        
+        container.appendChild(memberCard);
+    });
+}
+
+// Toggle between Grid and List View with accessibility improvements
+document.getElementById("gridView").addEventListener("click", function() {
+    const container = document.getElementById("directoryContainer");
+    container.classList.add("grid");
+    container.classList.remove("list");
+    this.setAttribute("aria-pressed", "true");
+    document.getElementById("listView").setAttribute("aria-pressed", "false");
+});
+
+document.getElementById("listView").addEventListener("click", function() {
+    const container = document.getElementById("directoryContainer");
+    container.classList.add("list");
+    container.classList.remove("grid");
+    this.setAttribute("aria-pressed", "true");
+    document.getElementById("gridView").setAttribute("aria-pressed", "false");
+});
+
 
 
