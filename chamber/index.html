@@ -17,7 +17,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+
     
     <!-- External Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +32,7 @@
     <header>
         <div class="logo-container">
             <div class="logo">
-                <img src="images/favicon.webp" alt="Suinta Chamber of Commerce">
+                <img src="images/favicon.webp" alt="Suinta Chamber of Commerce"width="50" height="50">
             </div>
             <h1 class="logo-name">
                 <span class="logo-top">Suinta</span>    
@@ -40,21 +41,20 @@
         </div>
         <nav>
            
-            <ul id="nav-menu"></ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
              
-                
-                
-            </ul>
+             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <img class="hero-image" src="images/hero-large.webp" loading="lazy" alt="Suinta Chamber of Commerce">
+            <img class="hero-image" src="images/hero-large.webp" alt="Suinta Chamber of Commerce" width="100%" height="700" loading="lazy">
+
             <div class="hero-text">
                 <h2>Building Connections, Growing Businesses</h2>
                 <p>Join the thriving business community in Port Moresby and explore endless networking opportunities.</p>
@@ -102,6 +102,15 @@
                     <p>Become a **member** and gain exclusive access to resources, networking opportunities, and commerce insights.</p>
                     <a href="join.html" class="cta-button">Sign Up Today</a>
                 </div>
+                                 
+                 <section>
+                 <h2>Business Directory</h2>
+                <button id="gridView">Grid View</button>
+                <button id="listView">List View</button>
+                <div id="directoryContainer" class="grid"></div>
+        </section>
+
+                
             </div>
         </section>
     </main>

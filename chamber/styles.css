@@ -43,6 +43,7 @@ header {
 .logo img {
     width: 50px;
     margin-right: 10px;
+    height: 50px; /* Ensures logo is square */
 }
 
 nav ul {
@@ -94,6 +95,7 @@ nav a.active {
 .hero img {
     width: 100%;
     max-height: 400px;
+    height: 700px; /* Ensures the image covers the area without stretching */
     object-fit: cover;
     display:block; /*prevents unwanted spacing*/
     border-radius: 8px;
@@ -153,6 +155,55 @@ nav a.active {
     transform: scale(1.05); /* Enlarges slightly */
 }
 
+.weather-temp {
+  font-size: 1.5rem;
+  color: #d9534f; /* Soft red for error indication */
+  font-weight: bold;
+  text-align: center;
+}
+
+.weather-details {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+}
+
+#directoryContainer.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
+    gap: 20px;
+    padding: 10px;
+}
+
+.business-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.business-card:hover {
+    transform: scale(1.02);
+}
+#directoryContainer.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#directoryContainer.grid .business-card {
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+}
+
+#directoryContainer.list .business-card {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
 
 footer {
     background-color: #00457C;
