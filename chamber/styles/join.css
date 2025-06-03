@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+}
+
+header, footer {
+  background-color: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+/*.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}*/
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar a.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #0077cc
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  background: #fff;
+}
+
+.membership-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.card {
+  padding: 1em;
+  background: #eee;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+}
+
+.card h2 {
+  margin: 0.5em 0;
+}
+
+button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0066cc;
+}
+
+form {
+  display: grid;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+input, select {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1em;
+  max-width: 400px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
