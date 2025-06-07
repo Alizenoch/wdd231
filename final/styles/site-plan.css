@@ -1,0 +1,139 @@
+/* Base Layout */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5dc; /* Sand Beige */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #228b22; /* Forest Green */
+  color: white;
+  padding: 1.5em 1em;
+  text-align: center;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+  background-color: #e0f7e9;
+  text-align: center;
+  padding: 4em 2em;
+}
+
+#hero h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+#hero p {
+  font-size: 1.2em;
+}
+
+#hero button {
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  background-color: #228b22;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: #1c741c;
+}
+
+/* Site Purpose Section */
+#site-purpose {
+  padding: 3em 2em;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  border-left: 5px solid #228b22;
+}
+
+#site-purpose h2 {
+  color: #228b22;
+}
+
+#site-purpose ul {
+  padding-left: 1.5em;
+  margin-top: 1em;
+}
+
+#site-purpose li {
+  margin-bottom: 1em;
+}
+
+/* Learning Activities */
+#activities {
+  background-color: #f0f8ff;
+  padding: 3em 2em;
+  text-align: center;
+}
+
+#activities article {
+  margin-bottom: 2em;
+}
+
+#activities img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1em;
+}
+
+/* Wireframe Section */
+#wireframe {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+#wireframe img {
+  max-width: 90%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #228b22;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  margin-top: 3em;
+}
