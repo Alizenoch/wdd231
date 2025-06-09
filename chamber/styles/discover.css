@@ -90,6 +90,12 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
 }
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* OR 'contain' based on layout */
+}
+
 nav ul {
     list-style: none;
     display: flex;
