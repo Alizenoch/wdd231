@@ -1,0 +1,241 @@
+/* Base Layout */
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "header"
+        "hero"
+        "sidebar"
+        "content"
+        "footer";
+}
+
+/* Responsive Grid for Medium Screens */
+@media (min-width: 641px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "hero hero"
+            "sidebar content"
+            "footer footer";
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Responsive Grid for Large Screens */
+@media (min-width: 1025px) {
+    .container {
+        grid-template-areas:
+            "header header header"
+            "hero hero hero"
+            "sidebar content content"
+            "footer footer footer";
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+}
+
+/* Assign Grid Areas */
+.header { grid-area: header; }
+.hero { grid-area: hero; }
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.footer { grid-area: footer; }
+
+/* General Color Updates */
+body {
+    background-color: #f8f8f8;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 90px; /* Make sure this matches or exceeds your header height */
+}
+
+/* Header Styles - Match index.css */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0077b6;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-header {
+    grid-area: header;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+    height: 50px;
+}
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    background: #005f8a;
+    color: #fff;
+    border-bottom: 3px solid #ff6f61;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e3f2fd;
+    color: #003366;
+    text-align: center;
+    padding: 30px 10px 20px 10px;
+    border-radius: 8px;
+    margin: 30px 0 20px 0;
+}
+.hero h2,
+.hero p,
+.hero a {
+    color: #003366;
+}
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
+}
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #d9534f;
+    transform: scale(1.05);
+}
+
+/* Sidebar */
+.sidebar {
+    background: #fff;
+    color: #003366;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Card Container and Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 1.5rem;
+}
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1rem;
+    max-width: 300px;
+    min-width: 220px;
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card img,
+.card-container img {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Gallery Hover Effect (Desktop & Tablet Only) */
+@media (min-width: 641px) {
+    .card img:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        transition: 0.3s ease-in-out;
+    }
+}
+
+/* Footer: white text on dark blue background */
+footer {
+    background-color: #00457C;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    font-size: 15px;
+    margin-top: 40px;
+    opacity: 0.95;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+footer a,
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer a:hover,
+.social-media a:hover {
+    text-decoration: underline;
+}
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+}
+.social-media li {
+    margin: 0 10px;
+}

@@ -168,41 +168,41 @@ nav a.active {
   text-align: center;
 }
 
-#directoryContainer.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
-    gap: 20px;
-    padding: 10px;
+#directoryContainer {
+    display: flex;
+    flex-wrap: wrap;         /* Allows cards to wrap to the next line if needed */
+    gap: 1.5rem;             /* Space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    align-items: stretch;    /* Make cards the same height */
 }
 
-.business-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 15px;
+/* Optional: style for individual cards */
+
+#directoryContainer .business-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-width: 220px;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-}
-
-.business-card:hover {
-    transform: scale(1.02);
-}
-#directoryContainer.list {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1rem;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
-#directoryContainer.grid .business-card {
-    display: inline-block;
-    width: 45%;
-    margin: 10px;
+#directoryContainer .business-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    transform: translateY(-4px) scale(1.03);
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
-#directoryContainer.list .business-card {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
+#directoryContainer .business-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 1rem;
 }
 
 footer {

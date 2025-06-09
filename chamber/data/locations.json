@@ -1,0 +1,52 @@
+{
+    "locations": [
+        {
+            "name": "Port Moresby Nature Park",
+            "address": "Goro Kaeaga Road, University, Port Moresby",
+            "description": "A lush 30-acre wildlife sanctuary featuring over 550 native animals, including tree kangaroos and cassowaries.",
+            "image": "images/port-moresby-nature-park.webp"
+        },
+        {
+            "name": "Bomana War Cemetery",
+            "address": "121 Bomana Road, Port Moresby",
+            "description": "The largest war cemetery in the Pacific, containing 3,824 Commonwealth graves from World War II.",
+            "image": "images/bomana-war-cemetery.webp"
+        },
+        {
+            "name": "National Museum & Art Gallery",
+            "address": "Independence Dr, Waigani, Port Moresby",
+            "description": "Established in 1975, this museum houses over 30,000 artifacts, showcasing Papua New Guinea’s rich cultural heritage.",
+            "image": "images/national-museum-art-gallery.webp"
+        },
+        {
+            "name": "Ela Beach",
+            "address": "Ela Beach Road, Port Moresby",
+            "description": "A scenic beachfront area perfect for relaxation, swimming, and local events with stunning ocean views.",
+            "image": "images/ela-beach.webp"
+        },
+        {
+            "name": "Varirata National Park",
+            "address": "Sogeri Plateau, Port Moresby",
+            "description": "A breathtaking 1,000-hectare nature reserve offering hiking trails, panoramic views, and diverse wildlife.",
+            "image": "images/varirata-national-park.webp"
+        },
+        {
+            "name": "Saint Mary’s Catholic Cathedral",
+            "address": "Winter Street, Port Moresby",
+            "description": "A striking Catholic cathedral known for its blue-and-white exterior, serving as the headquarters of the Archdiocese of Port Moresby.",
+            "image": "images/saint-marys-cathedral.webp"
+        },
+        {
+            "name": "National Orchid Garden",
+            "address": "Hubert Murray Highway, 14 Mile, Port Moresby",
+            "description": "A stunning botanical garden showcasing hundreds of hybrid and native orchids.",
+            "image": "images/national-orchid-garden.webp"
+        },
+        {
+            "name": "Parliament House of Papua New Guinea",
+            "address": "Independence Dr, Port Moresby",
+            "description": "The official seat of Papua New Guinea’s National Parliament, opened by Prince Charles in 1984.",
+            "image": "images/parliament-house.webp"
+        }
+    ]
+}

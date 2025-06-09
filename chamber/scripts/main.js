@@ -20,7 +20,7 @@ const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${
 async function fetchWeather() {
     const now = Date.now();
     const cachedData = JSON.parse(localStorage.getItem("weatherData")) || {};
-    
+
     if (cachedData.timestamp && now - cachedData.timestamp < 1800000) { // Use cached data (30 min)
         updateWeatherUI(cachedData.data);
         return;
@@ -30,7 +30,7 @@ async function fetchWeather() {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Weather API Error: ${response.status}`);
         const data = await response.json();
-        
+
         localStorage.setItem("weatherData", JSON.stringify({ data, timestamp: now }));
         updateWeatherUI(data);
     } catch (error) {
@@ -123,24 +123,8 @@ function displayMembers(members) {
     });
 }
 
-// ✅ Toggle between Grid and List View
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("gridView").addEventListener("click", function () {
-        const container = document.getElementById("directoryContainer");
-        container.classList.add("grid");
-        container.classList.remove("list");
-        this.setAttribute("aria-pressed", "true");
-        document.getElementById("listView").setAttribute("aria-pressed", "false");
-    });
 
-    document.getElementById("listView").addEventListener("click", function () {
-        const container = document.getElementById("directoryContainer");
-        container.classList.add("list");
-        container.classList.remove("grid");
-        this.setAttribute("aria-pressed", "true");
-        document.getElementById("gridView").setAttribute("aria-pressed", "false");
-    });
-});
+
 
 // ✅ Call the function to fetch and display members
 fetchMembers();
