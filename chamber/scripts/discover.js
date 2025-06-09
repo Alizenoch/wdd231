@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const lastModifiedElement = document.getElementById("lastModified");
+    lastModifiedElement.textContent = document.lastModified;
+});
+
+document.addEventListener("DOMContentLoaded", function () {
     const visitMessage = document.getElementById("visit-message");
     const lastVisit = localStorage.getItem("lastVisit");
 
