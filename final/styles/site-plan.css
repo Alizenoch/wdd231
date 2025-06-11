@@ -83,6 +83,7 @@ nav a:hover {
   margin: auto;
   background-color: white;
   border-left: 5px solid #228b22;
+  border-right: 5px solid #228b22;
 }
 
 #site-purpose h2 {
@@ -98,13 +99,38 @@ nav a:hover {
   margin-bottom: 1em;
 }
 
+#user-scenarios,
+#color-schema {
+  padding: 3em 2em;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  text-align: left;
+  border-left: 5px solid #228b22;
+  border-right: 5px solid #228b22;
+}
+
+#user-scenarios h2,
+#color-schema h2 {
+  color: #228b22;
+  text-align: left;
+}
+
+
 /* Learning Activities */
 #activities {
   background-color: #f0f8ff;
   padding: 3em 2em;
-  text-align: center;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  border-left: 5px solid #228b22;
+  border-right: 5px solid #228b22;
 }
-
+#activities > div {
+  max-width: 900px;
+  margin: auto;
+}
 #activities article {
   margin-bottom: 2em;
 }
@@ -115,6 +141,10 @@ nav a:hover {
   border-radius: 8px;
   margin-top: 1em;
 }
+#activities h2 {
+  color: #228b22;
+}
+
 
 /* Wireframe Section */
 #wireframe {
