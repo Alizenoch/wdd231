@@ -1,0 +1,25 @@
+.intro {
+    text-align: center;
+    padding: 40px;
+    background-color: #4A90E2;
+    color: white;
+}
+
+.programs {
+    padding: 30px;
+    background: white;
+}
+
+.activities {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.activity-card {
+    padding: 15px;
+    background-color: #7ED321;
+    color: white;
+    border-radius: 5px;
+}
