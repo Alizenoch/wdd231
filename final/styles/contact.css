@@ -1,0 +1,56 @@
+.contact {
+    text-align: center;
+    padding: 40px;
+    background-color: #4A90E2;
+    color: white;
+}
+
+.enrollment {
+    padding: 30px;
+    background: white;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input, form select {
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #7ED321;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.faq {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.faq-item {
+    margin: 10px 0;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 0.9em;
+    padding: 5px;
+}

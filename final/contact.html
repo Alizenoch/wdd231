@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Enrollment | BrightStart Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">BrightStart Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs & Curriculum</a></li>
+                <li><a href="contact.html">Contact & Enrollment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h1>Get in Touch with BrightStart Hub</h1>
+            <p>We’re here to answer your questions and guide you through the enrollment process.</p>
+            <ul>
+                <li><strong>Phone:</strong> +675 1234 5678</li>
+                <li><strong>Email:</strong> contact@brightstarthub.com</li>
+                <li><strong>Address:</strong> Port Moresby, Papua New Guinea</li>
+            </ul>
+        </section>
+
+        <section class="enrollment">
+            <h2>Enroll Today</h2>
+            <form id="enrollmentForm">
+                <label for="parentName">Parent's Name:</label>
+                <input type="text" id="parentName" required>
+
+                <label for="childName">Child's Name:</label>
+                <input type="text" id="childName" required>
+
+                <label for="childAge">Child's Age:</label>
+                <input type="number" id="childAge" required min="2" max="5">
+
+                <label for="program">Preferred Program:</label>
+                <select id="program">
+                    <option>Play-Based Learning</option>
+                    <option>Creative Exploration</option>
+                    <option>Physical Play & Movement</option>
+                </select>
+
+                <button type="submit">Submit Enrollment</button>
+            </form>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">What age group do you accept?</button>
+                <p class="faq-answer">We welcome preschoolers between ages 2 to 5.</p>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How does the enrollment process work?</button>
+                <p class="faq-answer">Simply fill out the form and our team will contact you with further details.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 BrightStart Hub | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
