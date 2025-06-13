@@ -18,3 +18,26 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error loading activities:", error));
 });
 
+document.getElementById("category-select").addEventListener("change", (event) => {
+    localStorage.setItem("preferredCategory", event.target.value);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedCategory = localStorage.getItem("preferredCategory");
+    if (savedCategory) {
+        document.getElementById("category-select").value = savedCategory;
+    }
+});
+
+document.querySelectorAll(".activity-card").forEach(card => {
+    card.addEventListener("click", () => {
+        document.getElementById("modal-title").innerText = card.querySelector("h3").innerText;
+        document.getElementById("modal-description").innerHTML = `<strong>Category:</strong> ${card.querySelector("p").innerText}`;
+        document.getElementById("activity-modal").style.display = "block";
+    });
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+    document.getElementById("activity-modal").style.display = "none";
+});
+
