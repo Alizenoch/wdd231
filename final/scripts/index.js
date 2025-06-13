@@ -2,11 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("BrightStart Hub loaded!");
 
     const ctaButton = document.querySelector(".cta-button");
-    ctaButton.addEventListener("mouseover", () => {
-        ctaButton.style.backgroundColor = "#5FAF00";
-    });
 
-    ctaButton.addEventListener("mouseout", () => {
-        ctaButton.style.backgroundColor = "#7ED321";
-    });
+    if (ctaButton) {
+        ctaButton.addEventListener("mouseenter", () => {
+            ctaButton.classList.add("hovered");
+        });
+
+        ctaButton.addEventListener("mouseleave", () => {
+            ctaButton.classList.remove("hovered");
+        });
+    }
 });
+// This script initializes the BrightStart Hub and adds hover effects to the CTA button.
+// It listens for the DOMContentLoaded event to ensure the page is fully loaded before executing.
