@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Color Matching Game",
+    "category": "Cognitive Skills",
+    "ageGroup": "Ages 3-5",
+    "image": "images/color-match.webp"
+  },
+  {
+    "name": "Shape Sorting",
+    "category": "Fine Motor Skills",
+    "ageGroup": "Ages 4-6",
+    "image": "images/shape-sort.webp"
+  },
+  {
+    "name": "Alphabet Hunt",
+    "category": "Literacy",
+    "ageGroup": "Ages 3-5",
+    "image": "images/alphabet-hunt.webp"
+  },
+  {
+    "name": "Counting with Beads",
+    "category": "Numeracy",
+    "ageGroup": "Ages 3-6",
+    "image": "images/count-beads.webp"
+  },
+  {
+    "name": "Animal Sound Recognition",
+    "category": "Auditory Learning",
+    "ageGroup": "Ages 3-5",
+    "image": "images/animal-sounds.webp"
+  },
+  {
+    "name": "Storytime Sequencing",
+    "category": "Reading Comprehension",
+    "ageGroup": "Ages 4-6",
+    "image": "images/story-sequence.webp"
+  },
+  {
+    "name": "Building Block Patterns",
+    "category": "Problem Solving",
+    "ageGroup": "Ages 4-6",
+    "image": "images/block-patterns.webp"
+  },
+  {
+    "name": "Music and Rhythm Play",
+    "category": "Creative Expression",
+    "ageGroup": "Ages 3-5",
+    "image": "images/music-rhythm.webp"
+  },
+  {
+    "name": "Fruit and Vegetable Sorting",
+    "category": "Healthy Habits",
+    "ageGroup": "Ages 4-6",
+    "image": "images/fruit-sort.webp"
+  },
+  {
+    "name": "Puzzle Challenge",
+    "category": "Critical Thinking",
+    "ageGroup": "Ages 5-6",
+    "image": "images/puzzle-challenge.webp"
+  },
+  {
+    "name": "Letter Tracing",
+    "category": "Handwriting Skills",
+    "ageGroup": "Ages 3-6",
+    "image": "images/letter-trace.webp"
+  },
+  {
+    "name": "Outdoor Scavenger Hunt",
+    "category": "Exploration & Observation",
+    "ageGroup": "Ages 4-6",
+    "image": "images/scavenger-hunt.webp"
+  },
+  {
+    "name": "Pattern Recognition",
+    "category": "Logic & Reasoning",
+    "ageGroup": "Ages 4-6",
+    "image": "images/pattern-recognition.webp"
+  },
+  {
+    "name": "Shadow Matching",
+    "category": "Visual Perception",
+    "ageGroup": "Ages 3-5",
+    "image": "images/shadow-match.webp"
+  },
+  {
+    "name": "Emotion Recognition Game",
+    "category": "Social-Emotional Learning",
+    "ageGroup": "Ages 3-6",
+    "image": "images/emotion-recognition.webp"
+  }
+]

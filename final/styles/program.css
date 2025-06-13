@@ -10,16 +10,33 @@
     background: white;
 }
 
-.activities {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
 .activity-card {
+    background: #f9f9f9;
+    border: 2px solid #ddd;
     padding: 15px;
-    background-color: #7ED321;
-    color: white;
-    border-radius: 5px;
+    text-align: center;
+    border-radius: 8px;
 }
+
+.activity-card img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    
+}
+
+@media (max-width: 600px) {
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr); /* Limits width usage */
+        gap: 10px;
+    }
+}
+
+
