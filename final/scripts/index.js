@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const lastModifiedElement = document.getElementById("lastModified");
+    lastModifiedElement.textContent = document.lastModified;
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const ctaButton = document.querySelector(".cta-button");
 
