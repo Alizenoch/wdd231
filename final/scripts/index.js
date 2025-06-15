@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("BrightStart Hub loaded!");
-
     const ctaButton = document.querySelector(".cta-button");
 
     if (ctaButton) {
@@ -13,5 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
 // This script initializes the BrightStart Hub and adds hover effects to the CTA button.
 // It listens for the DOMContentLoaded event to ensure the page is fully loaded before executing.
