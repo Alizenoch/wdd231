@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const lastModifiedElement = document.getElementById("lastModified");
+    lastModifiedElement.textContent = document.lastModified;
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     fetch("data/activities.json")
         .then(response => response.json())
