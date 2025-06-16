@@ -52,6 +52,10 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+nav ul li a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
 
 .contact {
     
