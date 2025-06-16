@@ -26,7 +26,7 @@ body {
     }
 }
 header {
-    background-color: #228b22; /* Forest Green */
+    background-color:  #001F3F; /* Forest Green */
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -57,8 +57,8 @@ nav ul li a {
     
     text-align: center;
     padding: 50px;
-    background-color: #4A90E2;
-    color: white;
+    background-color: #87CEEB;
+    color: #001F3F;
 }
 
 
@@ -84,7 +84,7 @@ form input, form select {
 
 button {
     padding: 10px;
-    background-color: #7ED321;
+    background-color:  #001F3F;
     color: white;
     border: none;
     cursor: pointer;
@@ -92,7 +92,8 @@ button {
 
 .faq {
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color:#E3F2FD;
+    
 }
 
 .faq-item {
@@ -105,7 +106,9 @@ button {
     font-size: 1em;
     font-weight: bold;
     cursor: pointer;
+    color: #333; /* Example dark gray */
 }
+
 
 .faq-answer {
     display: none;
@@ -115,7 +118,7 @@ button {
 
 /* Footer: white text on dark blue background */
 footer {
-    background-color:  #228b22; /* Forest Green */
+    background-color:   #001F3F; /* Forest Green */
     color:  white;
     text-align: center;
     padding: 30px;

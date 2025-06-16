@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #228b22; /* Forest Green */
+    background-color:  #001F3F; /* Forest Green */
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -37,8 +37,8 @@ nav ul li a {
 .intro {
     text-align: center;
     padding: 100px;
-    background-color: #4A90E2;
-    color: white;
+    background-color: #87CEEB;
+    color: #001F3F;
 }
 
 
@@ -106,7 +106,7 @@ nav ul li a {
 
 /* Footer: white text on dark blue background */
 footer {
-    background-color:  #228b22; /* Forest Green */
+    background-color:   #001F3F; /* Forest Green */
     color:  white;
     text-align: center;
     padding: 30px;
