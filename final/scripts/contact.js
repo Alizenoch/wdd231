@@ -1,7 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const lastModifiedElement = document.getElementById("lastModified");
-    lastModifiedElement.textContent = document.lastModified;
-});
+// Set the current year for the copyright notice
+        document.addEventListener("DOMContentLoaded", function() {
+            const year = new Date().getFullYear();
+            document.getElementById("copyrightYear").textContent = year;
+            document.getElementById("lastModified").textContent = document.lastModified;
+        });
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("enrollmentForm");
