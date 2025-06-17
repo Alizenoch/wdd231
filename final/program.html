@@ -6,14 +6,15 @@
     <meta name="description" content="Discover structured preschool programs and interactive learning activities designed for early childhood development.">
     <meta name="author" content="Alison Hopa">
 
-     <!-- Open Graph for Social Sharing -->
+    <!-- Open Graph for Social Sharing -->
     <meta property="og:title" content="Programs & Curriculum | BrightStart Hub">
     <meta property="og:description" content="Explore our programs designed for preschoolers, focusing on inclusive and engaging learning experiences.">
     <meta property="og:image" content="https://alizenoch.github.io/wdd231/final/images/favicon.webp">
     <meta property="og:url" content="https://alizenoch.github.io/wdd231/final/program.html">
 
-    <!-- Favicon -->
+    <!-- Favicon with fallback -->
     <link rel="icon" href="images/favicon.webp" type="image/webp">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/program.css" media="print" onload="this.media='all'">
@@ -23,18 +24,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Programs & Curriculum | BrightStart Hub</title>
-    
-   
-    
 </head>
 <body>
 
     <header>
-        <div class="logo"><img src="images/favicon.webp" alt="BrightStart Hub Logo" /></div>
+        <div class="logo">
+            <img src="images/favicon.webp" alt="BrightStart Hub Logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="program.html">Programs & Curriculum</a></li>
+                <li><a href="program.html" aria-current="page">Programs & Curriculum</a></li>
                 <li><a href="contact.html">Contact & Enrollment</a></li>
             </ul>
         </nav>
@@ -58,30 +58,33 @@
 
         <section class="activities">
             <h2>Interactive Learning</h2>
-             <div id="activity-list" class="activity-grid"></div>
+            <div id="activity-list" class="activity-grid"></div>
         </section>
-        <div id="activity-modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <p id="modal-description"></p>
-    </div>
-</div>
 
+        <div id="activity-modal" class="modal">
+            <div class="modal-content">
+                <button class="close" aria-label="Close Modal">&times;</button>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+            </div>
+        </div>
     </main>
 
     <footer>
-          <p>© <span id="copyrightYear"></span> Suinta Chamber of Commerce</p>
+        <p>© <span id="copyrightYear"></span> Suinta Chamber of Commerce</p>
         <ul class="social-media">
-            <li><a href="https://facebook.com/suintachamber">Facebook</a></li>
-            <li><a href="https://twitter.com/suintachamber">Twitter</a></li>
-            <li><a href="https://linkedin.com/company/suintachamber">LinkedIn</a></li>
-            <li><a href="https://youtube.com/suintachamber">YouTube</a></li>
+            <li><a href="https://facebook.com/brightstart hub">Facebook</a></li>
+            <li><a href="https://twitter.com/brightstart hub">Twitter</a></li>
+            <li><a href="https://linkedin.com/brightstart hub">LinkedIn</a></li>
+            <li><a href="https://youtube.com/brightstart hub">YouTube</a></li>
         </ul>
         <p>WDD 231 Class Project by Alison Hopa</p>
         <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-    <script src="scripts/program.js"></script>
+
+    <!-- Ensure JavaScript uses ES Modules -->
+    <script type="module" src="scripts/program.js"></script>
 
 </body>
 </html>
+
